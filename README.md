@@ -21,5 +21,6 @@ This project is a responsive website template designed with HTML and CSS. It inc
    ```bash
    git clone https://git@github.com:aswanthnarayan/Simplotel_Project.git
    or
-   git@github.com:aswanthnarayan/Simplotel_Project.git
+    git clone
+   https://github.com/aswanthnarayan/Simplotel_Project.git
    
