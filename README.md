@@ -19,4 +19,7 @@ This project is a responsive website template designed with HTML and CSS. It inc
 1. Clone the repository to your local machine:
 
    ```bash
-   git clone https://github.com/your-username/your-repo.git
+   git clone https://git@github.com:aswanthnarayan/Simplotel_Project.git
+   or
+   git@github.com:aswanthnarayan/Simplotel_Project.git
+   
