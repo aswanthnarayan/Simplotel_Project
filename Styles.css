@@ -1,66 +1,79 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: 'Playfair Display', serif;
     font-size: 16px;
 }
-.navbar{
+
+.navbar {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
     height: 10vh;
     width: 100%;
     font-weight: 500;
-    background-color:#ff7070}
-.navbar a{
+    background-color: #ff7070;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.navbar a {
     font-size: 1.2rem;
     text-decoration: none;
     color: #000;
 }
-.navbar img{
+
+.navbar img {
     width: 40px;
     height: 40px;
     display: none;
 }
+
 /* //////////////////////////////////////// */
 
-.main-page{
+.main-page {
     height: calc(100vh - 10vh);
     width: 100%;
     display: flex;
 }
 
-.image-div{
+.image-div {
     width: 50%;
 }
-.image-div img{
+
+.image-div img {
     width: 100%;
     height: 100%;
-    object-fit:cover;
+    object-fit: cover;
 }
-.content-div{
 
-    background: linear-gradient(90deg, rgba(255,247,173,1) 0%, rgba(254,209,211,1) 90%);
+.content-div {
+
+    background: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 90%);
     line-height: 2rem;
     flex: 1;
     display: flex;
-flex-direction: column;
-justify-content: center;
-padding-left: 5rem;
-padding-right: 5rem;
+    flex-direction: column;
+    justify-content: center;
+    padding-left: 5rem;
+    padding-right: 5rem;
 
-gap: 3rem;
+    gap: 3rem;
 }
-.content-div h1{
+
+.content-div h1 {
     font-size: 2.5rem;
 }
-.content-div p{
+
+.content-div p {
     overflow: hidden;
 }
-.content-div button{
-    max-width:180px;
-    padding-top:.8rem;
+
+.content-div button {
+    max-width: 180px;
+    padding-top: .8rem;
     padding-bottom: .8rem;
     border: none;
     font-size: .8rem;
@@ -71,62 +84,90 @@ gap: 3rem;
 
 
 /* ///////////////////////// */
-
-.second-page{
+.second-page {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 650px;
-    background: linear-gradient(90deg, rgba(255,247,173,1) 0%, rgba(254,209,211,1) 100%);
-
+    background: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 100%);
 }
 
-  .second-page-main {
+.second-page-main {
     display: flex;
     width: 100%;
- }
- 
- .image-container {
-   display: flex;
-   width: 50%;
-   height: 400px;
-  padding-left: 60px;
-  padding-right: 30px;
- }
- 
- .img-container-one {
-   display: flex;
-   flex-direction: column;
-   width: 50%;
-   height: 100%;
- }
+}
+
+.image-container {
+    display: flex;
+    width: 50%;
+    height: 400px;
+    padding-left: 60px;
+    padding-right: 30px;
+}
+
+.img-container-one {
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    height: 100%;
+}
+
+.img-container-one img {
+    width: 100%;
+    height: 50%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.img-container-two {
+    flex: 1;
+    height: 100%;
+}
+
+.img-container-two img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 10px;
+}
+
+.content-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    background-color: #ff7070;
+    height: 220px;
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding-left: 20px;
+    overflow: hidden;
+}
+
+.container h1 {
+    font-size: 3.5rem;
+    line-height: 3rem;
+}
+
+.container p {
+    font-size: 1rem;
+}
+
+.min-button-container a {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    text-decoration: none;
+    color: #000;
+}
 
 
- 
- .img-container-one img {
-     width: 100%;
-     height: 50%;
-     object-fit: cover;
-     padding: 10px;
- }
- 
- .img-container-two {
-     flex: 1;
-     height: 100%;
- }
- 
- .img-container-two img {
-     width: 100%;
-     height: 100%;
-     object-fit: cover;
-     padding: 10px;
-
- }
- 
- .content-container {
-     flex: 1;
- }
 
 
 
@@ -138,12 +179,8 @@ gap: 3rem;
 
 
 
+@media screen and (max-width: 640px) {
 
-
-
-
-
-@media  screen and (max-width: 640px) {
     /* navbar */
     .navbar {
         justify-content: space-between;
@@ -151,7 +188,7 @@ gap: 3rem;
         padding-right: 20px;
     }
 
-    .navbar img{
+    .navbar img {
         width: 30px;
         height: 30px;
         display: flex;
@@ -164,56 +201,198 @@ gap: 3rem;
 
     /*           */
 
-.main-page{
-    flex-direction: column;
+    .main-page {
+        flex-direction: column;
+    }
+
+    .content-div {
+        padding-left: 2.5rem;
+        padding-right: 2.5rem;
+    }
+
+    .image-div {
+        width: 100%;
+    }
+
+
+    .second-page-main {
+        flex-direction: column;
+    }
+
+    .image-container {
+        width: 100%;
+        height: 100%;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .img-container-one {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img-container-one img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+
+    }
+
+    .img-container-two {
+        flex: none;
+        height: 100%;
+    }
+
+    .img-container-two img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        padding: 10px;
+    }
+
+    .content-container {
+        width: 100%;
+    }
+
+    .container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .container h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 }
-.content-div{
-    padding-left: 2.5rem;
-padding-right: 2.5rem;
+
+
+
+@media only screen and (min-width: 641px) and (max-width: 962px) {
+
+
+    .main-page {
+        background: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 90%);
+
+    }
+
+    .navbar {
+        font-size: 1.2rem;
+    }
+
+    /* ///////////////////////////////////////////////////////// */
+    .main-page {
+        height: 45vh;
+    }
+
+    .image-div {
+        width: 40%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .image-div img {
+        width: 100%;
+        height: 50%;
+        object-fit: cover;
+        padding-right: 30px;
+    }
+
+    .content-div {
+        background: none;
+        gap: 2rem;
+        line-height: 1.6rem;
+    }
+
+    .content-div h1 {
+        font-size: 2rem;
+    }
+
+
+    /* //////////////////////////////////////// */
+
+    .second-page {
+        height: 45vh;
+    }
+
+
+
+
+    .image-container {
+        width: 60%;
+        height: 100%;
+        padding: 20px;
+        flex-direction: column;
+        justify-content: space-around;
+    }
+
+    .img-container-one {
+        flex-direction: row;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+    }
+
+    .img-container-one img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+
+    }
+
+    .img-container-two {
+        flex: none;
+        height: 100%;
+    }
+
+    .img-container-two img {
+        width: 100%;
+        height: 200px;
+        object-fit: cover;
+        padding: 10px;
+    }
+
+
+    .content-container {
+        width: 100%;
+        padding: 30px 30px 30px 0px;
+    }
+
+    .container {
+        width: 100%;
+        height: 100%;
+    }
+
+    .container h1 {
+        font-size: 2.5rem;
+        line-height: 2.5rem;
+    }
+
+    .container p {
+        font-size: 0.9rem;
+    }
+
 }
-
-.image-div{
-    width: 100%;
-}
-
-  }
-
-
-
-  @media only screen and (min-width: 641px) and (max-width: 962px) {
-
- 
-.main-page{
-    background: linear-gradient(90deg, rgba(255,247,173,1) 0%, rgba(254,209,211,1) 90%);
-    
-}
-
-        .navbar{
-            font-size: 1.2rem;
-        }
-
-        .image-div{
-            width: 40%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .image-div img{
-            width: 100%;
-            height: 40%;
-            object-fit:cover;
-            padding-right: 30px;
-        }
-        .content-div{
-            background: none;
-            gap: 2rem;
-            line-height: 1.6rem;
-        }
-        .content-div h1{
-            font-size: 2rem;
-        }
-
-
-  }
-
- 
