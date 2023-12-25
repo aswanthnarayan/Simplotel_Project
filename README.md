@@ -1,6 +1,7 @@
 # Simplotel Project
 
 This project is a responsive website template designed with HTML and CSS. It includes a navigation bar, a main page with text and a button, and a second page with images and content. The styling is enhanced with the use of custom fonts and color gradients.
+The website is completely responsive for desktop, tablet, and mobile 
 
 [Live Demo](https://simplotel-aswanth-ck.netlify.app/)
 
