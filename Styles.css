@@ -1,11 +1,24 @@
+/* CSS VARIABLES */
+:root {
+    --primary-color: #ff7070;
+    --background-color: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 90%);
+    --secondary-color: #fff;
+    --utility-color: #000;
+    --main-font: 'Roboto', sans-serif;
+    --navbar-font: 'Playfair Display', serif;
+
+}
+
+/* COMMON STYLE */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: 'Playfair Display', serif;
+    font-family: var(--main-font);
     font-size: 16px;
 }
 
+/* NAVBAR STYLE */
 .navbar {
     display: flex;
     justify-content: space-evenly;
@@ -13,16 +26,21 @@
     height: 10vh;
     width: 100%;
     font-weight: 500;
-    background-color: #ff7070;
+    background-color: var(--primary-color);
     position: sticky;
     top: 0;
     z-index: 100;
 }
 
 .navbar a {
+    font-family: var(--navbar-font);
     font-size: 1.2rem;
     text-decoration: none;
-    color: #000;
+    color: var(--utility-color);
+}
+
+.navbar a:hover {
+    color: var(--secondary-color);
 }
 
 .navbar img {
@@ -31,8 +49,7 @@
     display: none;
 }
 
-/* //////////////////////////////////////// */
-
+/* MAIN PAGE STYLE */
 .main-page {
     height: calc(100vh - 10vh);
     width: 100%;
@@ -52,7 +69,7 @@
 
 .content-div {
 
-    background: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 90%);
+    background: var(--background-color);
     line-height: 2rem;
     flex: 1;
     display: flex;
@@ -78,22 +95,24 @@
     padding-bottom: .8rem;
     border: none;
     font-size: .8rem;
-    background-color: #ff7070;
-    color: #ffff;
+    background-color: var(--primary-color);
+    color: var(--secondary-color);
     cursor: pointer;
+}
 
+.content-div button:hover {
+    background-color: red;
 }
 
 
-
-/* ///////////////////////// */
+/* SECOND PAGE STYLE */
 .second-page {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
     height: 650px;
-    background: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 100%);
+    background: var(--background-color);
 }
 
 .second-page-main {
@@ -142,7 +161,7 @@
 }
 
 .container {
-    background-color: #ff7070;
+    background-color: var(--primary-color);
     height: 220px;
     width: 70%;
     display: flex;
@@ -160,6 +179,7 @@
 
 .container p {
     font-size: 1rem;
+    overflow: hidden;
 }
 
 .min-button-container a {
@@ -167,24 +187,15 @@
     gap: 10px;
     align-items: center;
     text-decoration: none;
-    color: #000;
+    color: var(--utility-color);
 }
 
 
-
-
-
-
-
-
-
-
-
-
+/* FOR SMALLER DEVICES / MOBILE PHONES */
 
 @media screen and (max-width: 640px) {
 
-    /* navbar */
+    /* NAVBAR */
     .navbar {
         justify-content: space-between;
         padding-left: 20px;
@@ -202,7 +213,7 @@
     }
 
 
-    /*           */
+    /*MAIN PAGE*/
 
     .main-page {
         flex-direction: column;
@@ -218,7 +229,7 @@
         width: 100%;
     }
 
-
+    /*SECOND PAGE  */
     .second-page-main {
         flex-direction: column;
     }
@@ -274,29 +285,20 @@
     }
 
 
-
-
-
-
 }
 
-
-
+/* FOR MEDIUM DEVICES / TABLETS / IPADS */
 @media only screen and (min-width: 641px) and (max-width: 962px) {
 
-
-    .main-page {
-        background: linear-gradient(90deg, rgba(255, 247, 173, 1) 0%, rgba(254, 209, 211, 1) 90%);
-
-    }
-
+    /* NAVBAR */
     .navbar {
         font-size: 1.2rem;
     }
 
-    /* ///////////////////////////////////////////////////////// */
+    /* MAIN PAGE */
     .main-page {
-        height: 45vh;
+        height: auto;
+        background: var(--background-color)
     }
 
     .image-div {
@@ -321,18 +323,13 @@
     }
 
 
-    /* //////////////////////////////////////// */
-
-    .second-page {
-        height: 45vh;
-    }
-
+    /* SECOND PAGE */
 
     .image-container {
         width: 60%;
         height: 100%;
         padding: 20px;
-        flex-direction: column;       
+        flex-direction: column;
     }
 
     .img-container-one {
@@ -345,7 +342,7 @@
 
     .img-container-one img {
         width: 100%;
-        height: 150px;
+        height: 200px;
         object-fit: cover;
     }
 
@@ -369,10 +366,11 @@
     .container {
         width: 100%;
         height: 100%;
+
     }
 
     .container h1 {
-        font-size: 2.5rem;
+        font-size: 2rem;
         line-height: 2.5rem;
     }
 
@@ -381,5 +379,5 @@
     }
 
 
-    
+
 }
