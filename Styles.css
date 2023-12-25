@@ -203,11 +203,12 @@
 
     .main-page {
         flex-direction: column;
+    height: auto
+
     }
 
     .content-div {
-        padding-left: 2.5rem;
-        padding-right: 2.5rem;
+        padding: 2.5rem;
     }
 
     .image-div {
@@ -221,10 +222,8 @@
 
     .image-container {
         width: 100%;
-        height: 100%;
         padding: 20px;
         flex-direction: column;
-        justify-content: space-around;
     }
 
     .img-container-one {
@@ -236,7 +235,7 @@
 
     .img-container-one img {
         width: 100%;
-        height: 200px;
+        height: 150px;
         object-fit: cover;
 
     }
